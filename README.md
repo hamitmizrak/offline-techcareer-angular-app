@@ -1,6 +1,7 @@
-
-
 # Angular & Typescript
+> GitHub Clone
+> git clone https://github.com/hamitmizrak/offline-techcareer-angular-app
+
 [Angular GitHub](https://github.com/hamitmizrak/offline-techcareer-angular-app) 
 
 ## Git Kurulumu
@@ -15,11 +16,50 @@ https://nodejs.org/en/download/package-manager
 
 ---
 ##  Version
-git -v
+node -v
 npm -v 
+java --version
+git --version
+git -v
+ng v
+ng version 
+ng --help
+
+
+
 --
+##  Npm Komutları
+npm init
+npm init -y
 npm list 
 npm list -g 
+npm list -g  --depth=0
+
+npm root 
+npm root -g
+
+npm config list -l
+
+npm install 
+npm i
+npm install --save bootstrap
+npm uninstall --save bootstrap
+npm update bootstrap
+
+##  Npm Clean
+npm uninstall -g @angular/cli
+npm cache clean
+
+## Angular İçin Öncelikle Kurmamız gerekenler
+npm install -g typescript
+npm i typescript
+
+npm install -g @angular/cli
+npm i @angular/cli
+
+npm i  bootstrap
+npm i  fontawesome
+npm i -g nodemon
 
 ## Angular Kurulumu
 ```sh
@@ -33,16 +73,57 @@ http://localhost:9999
 curl localhost:9999
 ```
 
+## Angular CLI Hazır Bileşenler
+ng generate component loginComponent 
+ng g v login
+ng g pipe loginPipeline
+ng g service loginService
+ng g module loginModule
+ng g directive loginDirective
+ng g interface loginInterface
+ng g enum loginEnum
 
 
+## 3.Parti Uygulamalar Ekle
+### Font-awesome
+```sh	
+Terminal => npm i font-awesome 
+angular.json => 
+ "styles": [
+              "src/styles.css",
+              "node_modules/font-awesome/css/font-awesome.css"
+            ],
 
+ <i class="fa fa-car"></i>
+```
 
+### Bootstrap
+```sh	
+Terminal => npm i bootstrap
+angular.json => 
+ "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
 
+ "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/jquery/dist/css/jquery.min.js"
+            ],
 
+<div class="alert alert-primary" role="alert">Bootstrap Çalıştı</div>
+```
 
+### jQuery
+```sh	
+Terminal => npm i jquery
+angular.json => 
+ "scripts": [
+              "node_modules/jquery/dist/css/jquery.min.js"
+            ],
 
-
-
+<div class="alert alert-primary" role="alert">Bootstrap Çalıştı</div>
+```
 
 
 # TechAngularApp
