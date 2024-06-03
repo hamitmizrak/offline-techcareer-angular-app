@@ -1,7 +1,7 @@
 
 
 # Angular & Typescript
-[Angular GitHub]()
+[Angular GitHub](https://github.com/hamitmizrak/offline-techcareer-angular-app)
 
 ## Git Kurulumu
 https://www.git-scm.com/download/win
