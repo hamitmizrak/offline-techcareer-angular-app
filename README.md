@@ -2,6 +2,8 @@
 > GitHub Clone
 > git clone https://github.com/hamitmizrak/offline-techcareer-angular-app
 
+- ng serve --port 9999 --open
+
 [Angular GitHub](https://github.com/hamitmizrak/offline-techcareer-angular-app) 
 
 ## Git Kurulumu
@@ -83,6 +85,11 @@ ng g directive loginDirective
 ng g interface loginInterface
 ng g enum loginEnum
 
+## NPM install Ekle(3.libraries)
+npm i font-awesome 
+npm i bootstrap
+npm i jquery
+npm i -g nodemon
 
 ## 3.Parti Uygulamalar Ekle
 ### Font-awesome
@@ -125,7 +132,25 @@ angular.json =>
 <div class="alert alert-primary" role="alert">Bootstrap Çalıştı</div>
 ```
 
+### typescript
+- Typescript bir değişiklik olduğunda otomatik olarak derleme yapsın
+```sh 
+npm i -g nodemon
+1:YOL
+tsc TypeScriptTutorial.ts
+tsc --watch TypeScriptTutorial.ts
+nodemon -q typescript/TypeScriptTutorial.js
 
+2.YOL (package.json)
+"tsc_nodemon": " tsc --watch nodemon typescript/TypeScriptTutorial.ts && nodemon -q typescript/TypeScriptTutorial.js"
+npm run tsc_nodemon
+```
+
+    
+
+
+---
+######
 # TechAngularApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
