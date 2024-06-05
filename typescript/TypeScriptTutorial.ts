@@ -1,6 +1,5 @@
 //  npm run tsc_nodemon
 
-
 // Data Type (Temel Tipler)
 console.log(" ")
 console.log(" Temel Tipler ")
@@ -119,7 +118,7 @@ console.log("enum value: " + WeekDay.Sunday);
 // let dataValue3:[]=[1,2,3,"Malatya",true,44.34];
 // let dataValue3:number[]=[1,2,3];
 let dataValue3: Array<number> = [12, 29, 35];
-dataValue3[3]=99999;
+dataValue3[3] = 99999;
 console.log(dataValue3);
 console.log(dataValue3[0]);
 for (let i = 0; i < dataValue3.length; i++) {
@@ -136,24 +135,24 @@ for (let temp of dataValue3) {
 
 ////////////////////////////////////////////////////
 // 12-) Object
-const objectValue=()=>{
-console.log("OBJECT ******");
-let computer:{
-    computerName:string,
-    trade:string,
-    newVersion:boolean,
-    dataValue3: Array<number>
-}={
-    computerName:"Laptop",
-    trade:"PC",
-    newVersion:true,
-    dataValue3: [12, 29, 35]
-}
+const objectValue = () => {
+    console.log("OBJECT ******");
+    let computer: {
+        computerName: string,
+        trade: string,
+        newVersion: boolean,
+        dataValue3: Array<number>
+    } = {
+        computerName: "Laptop",
+        trade: "PC",
+        newVersion: true,
+        dataValue3: [12, 29, 35]
+    }
 
-console.log(computer);
-console.log(computer.computerName);
-console.log(computer.trade);
-console.log(computer.dataValue3);
+    console.log(computer);
+    console.log(computer.computerName);
+    console.log(computer.trade);
+    console.log(computer.dataValue3);
 
 }
 objectValue()
@@ -270,8 +269,8 @@ const forLoopFunc = () => {
 forLoopFunc()
 
 const whileLoopFunc = () => {
-    let k:number = 1;
-    while ( k <= 9) {
+    let k: number = 1;
+    while (k <= 9) {
         document.write(k)
         k++;
     }
@@ -280,11 +279,11 @@ const whileLoopFunc = () => {
 whileLoopFunc()
 
 const doWhileLoopFunc = () => {
-    let i:number = 1;
-    do{
-       document.write(i)
+    let i: number = 1;
+    do {
+        document.write(i)
         i++
-    } while ( i <= 9);
+    } while (i <= 9);
     document.writeln("</br>")
 }
 doWhileLoopFunc()
@@ -347,13 +346,204 @@ dataString()
 
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
-
+// OOP 
 // CLASS
+class Computer {
 
+    // Variable
+    private cpu: number;
+    private mainboard: string;
+    private isNewVersion: boolean;
+
+    // Constructur
+    constructor(cpu: number, mainboard: string, isNewVersion: boolean) {
+        this.cpu = cpu;
+        this.mainboard = mainboard;
+        this.isNewVersion = isNewVersion;
+    }
+
+    // Function
+    computerAllInformation(): void {
+        console.log(`CPU: ${this.cpu}, Mainboard: ${this.mainboard}, IsNewVersion: ${this.isNewVersion}`);
+    }
+
+    /////////////////////////////////////////////
+    // Getter and Setter
+    // Cpu
+    public get getCpu() {
+        return this.cpu;
+    }
+    public set setCpu(cpu: number) {
+        this.cpu = cpu;
+    }
+
+    // Get Set Mainboard
+    public get getMainboard() {
+        return this.mainboard;
+    }
+    public set setMainboard(mainboard: string) {
+        this.mainboard = mainboard;
+    }
+
+    // Get Set NewVersion 
+    public get getIsNewVersion() {
+        return this.isNewVersion;
+    }
+    public set setIsNewVersion(isNewVersion: boolean) {
+        this.isNewVersion = isNewVersion;
+    }
+}
+
+// cpu:number, mainboard:string, isNewVersion:boolean
+// 1.Instance (Computer)
+const computerInstance = new Computer(5, "mainboard XKL78", true);
+console.log(computerInstance)
+computerInstance.computerAllInformation();
+
+// 1.Instance (Computer)
+const computerInstance2 = new Computer(5, "mainboard XKL78", true);
+computerInstance2.setCpu = 1;
+computerInstance2.setMainboard = "GTX 4090";
+computerInstance2.setIsNewVersion = false;
+
+console.log(computerInstance2.getCpu)
+console.log(computerInstance2.getIsNewVersion)
+console.log(computerInstance2.getMainboard)
+console.log("/////////////////////////////")
+
+/////////////////////////////////////////////////////////////////
 // GENERICS
+class Computer2<T>{
 
+    // Variable
+    public cpu: T;
+    public mainboard: T;
+    public isNewVersion: T;
+}
+
+const computerValue1 = new Computer2<String>();
+computerValue1.cpu = "generics CPU 4.5GHZ";
+computerValue1.mainboard = "generics Mainboard GTX963";
+computerValue1.isNewVersion = "generics 14 Gen";
+console.log(computerValue1);
+console.log(computerValue1.cpu);
+console.log(computerValue1.mainboard);
+console.log(computerValue1.isNewVersion);
+
+
+
+/////////////////////////////////////////////////////////////////
 // INHERITANCE
+class Msi extends Computer {
+    constructor(cpu: number, mainboard: string, isNewVersion: boolean) {
+        super(cpu, mainboard, isNewVersion);
+    }
+}
 
+// Inheritance super class new verebilirsiniz
+const dataComputer = new Computer(9, "msi-mainboard XKL78", false);
+
+const msiComputer = new Msi(9, "msi-mainboard XKL78", false);
+console.log(msiComputer)
+msiComputer.computerAllInformation();
+
+/////////////////////////////////////////////////////////////////
 // ABSTRACT 
+// Gövdeli+Gövdesiz Method
+abstract class Car {
 
+    // Variable
+    private carPrice: number;
+    private carVersion: string;
+    private carModel: string;
+
+    // Constructur
+    constructor(carPrice: number, carVersion: string, carModel: string) {
+        this.carPrice = carPrice;
+        this.carVersion = carVersion;
+        this.carModel = carModel;
+    }
+
+    // Function (Gövdeli)
+    carAllInformation(): void {
+        console.log(`carPrice: ${this.carPrice}, carVersion: ${this.carVersion}, carModel: ${this.carModel}`);
+    }
+
+    // Gövdesiz Function
+    abstract carVersionAndModel(): void
+
+    /////////////////////////////////////////////
+    // Getter and Setter
+    // carPrice
+    public get getCarPrice() {
+        return this.carPrice;
+    }
+    public set setCarPrice(carPrice: number) {
+        this.carPrice = carPrice;
+    }
+
+    // Get Set CarVersion
+    public get getCarVersion() {
+        return this.carVersion;
+    }
+    public set setCarVersion(carVersion: string) {
+        this.carVersion = carVersion;
+    }
+
+    // Get Set NewVersion 
+    public get getCarModel() {
+        return this.carModel;
+    }
+    public set setCarModel(carModel: string) {
+        this.carModel = carModel;
+    }
+}
+
+
+class Audi extends Car {
+    constructor(carPrice: number, carVersion: string, carModel: string) {
+        super(carPrice, carVersion, carModel);
+    }
+
+    carVersionAndModel(): void {
+        console.log("Car Version: ");
+    }
+}
+
+
+// Abstract super class new veremezsiniz.
+// Gövdeli ve Gövdesiz metotlar
+// const carData= new Car(9,"msi-mainboard XKL78",false);
+
+
+//carPrice:number, carVersion:string, carModel:string
+const audiCar = new Audi(50, "Version 44", "A3");
+console.log(audiCar)
+audiCar.carAllInformation();
+
+
+/////////////////////////////////////////////////////////////////
 // INTERFACE
+
+interface IComputer {
+    cpu: number;
+    mainboard: string;
+    isNewVersion: boolean;
+}
+
+function getPrice(iComputer: IComputer){
+    console.log("Computer: "+iComputer.mainboard);
+}
+getPrice({cpu:5,mainboard:"Main XYZ89",isNewVersion:true})
+
+class ComputerInterface implements IComputer{
+    cpu: number;
+    mainboard: string;
+    isNewVersion: boolean;
+
+    constructor(cpu: number, mainboard: string, isNewVersion: boolean) {
+        this.cpu = cpu;
+        this.mainboard = mainboard;
+        this.isNewVersion = isNewVersion;
+    }
+}
