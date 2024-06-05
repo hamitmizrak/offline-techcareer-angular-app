@@ -363,8 +363,8 @@ class Computer {
     }
 
     // Function
-    computerAllInformation(): void {
-        console.log(`CPU: ${this.cpu}, Mainboard: ${this.mainboard}, IsNewVersion: ${this.isNewVersion}`);
+    computerAllInformation(data:string): void {
+        console.log(`CPU: ${this.cpu}, Mainboard: ${this.mainboard}, IsNewVersion: ${this.isNewVersion}, data:${data}`);
     }
 
     /////////////////////////////////////////////
@@ -398,13 +398,14 @@ class Computer {
 // 1.Instance (Computer)
 const computerInstance = new Computer(5, "mainboard XKL78", true);
 console.log(computerInstance)
-computerInstance.computerAllInformation();
+computerInstance.computerAllInformation("Data44"); //polymorphism
 
 // 1.Instance (Computer)
 const computerInstance2 = new Computer(5, "mainboard XKL78", true);
 computerInstance2.setCpu = 1;
 computerInstance2.setMainboard = "GTX 4090";
 computerInstance2.setIsNewVersion = false;
+computerInstance2.computerAllInformation("Data23");//polymorphism
 
 console.log(computerInstance2.getCpu)
 console.log(computerInstance2.getIsNewVersion)

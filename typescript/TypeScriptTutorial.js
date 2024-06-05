@@ -323,8 +323,8 @@ var Computer = /** @class */ (function () {
         this.isNewVersion = isNewVersion;
     }
     // Function
-    Computer.prototype.computerAllInformation = function () {
-        console.log("CPU: ".concat(this.cpu, ", Mainboard: ").concat(this.mainboard, ", IsNewVersion: ").concat(this.isNewVersion));
+    Computer.prototype.computerAllInformation = function (data) {
+        console.log("CPU: ".concat(this.cpu, ", Mainboard: ").concat(this.mainboard, ", IsNewVersion: ").concat(this.isNewVersion, ", data:").concat(data));
     };
     Object.defineProperty(Computer.prototype, "getCpu", {
         /////////////////////////////////////////////
@@ -379,12 +379,13 @@ var Computer = /** @class */ (function () {
 // 1.Instance (Computer)
 var computerInstance = new Computer(5, "mainboard XKL78", true);
 console.log(computerInstance);
-computerInstance.computerAllInformation();
+computerInstance.computerAllInformation("Data44"); //polymorphism
 // 1.Instance (Computer)
 var computerInstance2 = new Computer(5, "mainboard XKL78", true);
 computerInstance2.setCpu = 1;
 computerInstance2.setMainboard = "GTX 4090";
 computerInstance2.setIsNewVersion = false;
+computerInstance2.computerAllInformation("Data23"); //polymorphism
 console.log(computerInstance2.getCpu);
 console.log(computerInstance2.getIsNewVersion);
 console.log(computerInstance2.getMainboard);
