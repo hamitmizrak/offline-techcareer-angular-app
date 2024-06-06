@@ -168,6 +168,7 @@ ng g c blogHeader
 ng g c blogMain
 ng g c blogContent
 ng g c blogFooter
+ng g c blogAbout
 
 
 - ng serve --port 9999 --open

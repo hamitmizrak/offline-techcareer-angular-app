@@ -1,1 +1,43 @@
-<p>blog-main works!</p>
+<!-- <ng-container *ngIf="!blogCard; then blog; else noBlogCard">
+</ng-container> -->
+
+<ng-container *ngIf="blogCard; then blog; else noBlogCard">
+</ng-container>
+
+<ng-template #blog>
+    <div class="container mt-3 mb-4">
+        <div class="row">
+            <div *ngFor="let temp of blogCard | slice:0:6" class="col-sm-12 col-md-3 col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{temp.header}}</h5>
+                        <img class="card-img-top" [src]="temp.picture" alt="Resim yoktur" srcset="">
+                        <p class="card-text line-clamp5">{{temp.text}}</p>
+                        <!-- <span style="float: right; color:cadetblue; display: inline-block;" class="">{{temp.date | date:"fullDate"}}</span> -->
+
+                        <a (click)="detailPage()" [href]="temp.link" class="btn btn-primary">Details</a>
+                        <br /><br />
+                        <span class="text-muted float-start">{{temp.categoryName}}</span>
+                        <span class="text-muted float-end">{{temp.date | date:"fullDate"}}</span>
+                    </div>
+                </div>
+            </div>
+            <div [hidden]="!(blogCard.length>=6)" >6 veya daha fazla Blog var.</div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #noBlogCard>
+    <form>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-8">
+                    <input type="text" title="blog ara" placeholder="Blog Ara..." class="form-control mb-5"/>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary">Blog Ara</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</ng-template>

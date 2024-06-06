@@ -1,5 +1,8 @@
+import { BlogAboutComponent } from './../blog-about/blog-about.component';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
 
 // Componentler
 import { BlogContentComponent } from '../blog-content/blog-content.component';
@@ -18,11 +21,15 @@ import { BlogNavbarComponent } from '../blog-navbar/blog-navbar.component';
   standalone: true,
   imports: [
     RouterOutlet,
+    CommonModule,
     BlogHeaderComponent,
     BlogMainComponent,
     BlogFooterComponent,
     BlogContentComponent,
-    BlogNavbarComponent],
+    BlogNavbarComponent,
+    BlogAboutComponent,
+    
+  ],
     
 
   // Html dosyasını normalde template:``
