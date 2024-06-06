@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+PROJECT_NAME: Blog Page
+PROJECT_VERSION: v1.0.0
+*/
+
+:root{
+    --blog_bg:"black";
+    --blog_color:color:"white"
+}
+
+*{
+    margin:0;
+    padding:0 px;
+    box-sizing:border-box;
+}
+
+html{
+    font-size:20px;
+}
+
+body{
+    background-color: "var(--blog_bg)";
+    color: var(--blog_color);
+}
+
+p{
+    color:blue
+}
+
+ul{
+    list-style:none;
+}
+
+a{
+    text-decoration:none;
+}
+
+.line-clamp5{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}

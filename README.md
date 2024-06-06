@@ -173,7 +173,19 @@ ng g c blogFooter
 - ng serve --port 9999 --open
 - npm run tsc_nodemon
 
+-- styles.css
+angular.json
+"src/styles.css",
+
 ---
+
+## Hatalar Ve çözümü
+- This syntax requires an imported helper but module 'tslib' cannot be found.
+
+- npm i tslib --save-dev
+npm i
+
+
 ######
 # TechAngularApp
 

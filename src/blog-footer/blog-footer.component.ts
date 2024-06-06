@@ -9,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class BlogFooterComponent {
 
+   currentYear:number = new Date().getFullYear();
+
 }

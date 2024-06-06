@@ -10,7 +10,6 @@
     "serve:ssr:tech-angular-app": "node dist/tech-angular-app/server/server.mjs",
     "nodemon": "nodemon -q typescript/TypeScriptTutorial.js",
     "tsc_nodemon": " tsc --watch nodemon typescript/TypeScriptTutorial.ts && nodemon -q typescript/TypeScriptTutorial.js"
-    
   },
   "private": true,
   "dependencies": {
@@ -29,7 +28,6 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.7.1",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
@@ -45,6 +43,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "tslib": "^2.6.3",
     "typescript": "~5.4.2"
   }
 }
