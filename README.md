@@ -148,7 +148,30 @@ npm run tsc_nodemon
 ```
 
     
+--- 
+# Project Step
+## Angular CLI Hazır Bileşenler
+ng generate component loginComponent 
+ng g c blogHeader 
+ng g v login
+ng g pipe loginPipeline
+ng g service loginService
+ng g module loginModule
+ng g directive loginDirective
+ng g interface loginInterface
+ng g enum loginEnum
 
+
+cd ./src
+ng g c blogNavbar
+ng g c blogHeader
+ng g c blogMain
+ng g c blogContent
+ng g c blogFooter
+
+
+- ng serve --port 9999 --open
+- npm run tsc_nodemon
 
 ---
 ######
