@@ -3,8 +3,7 @@
 > git clone https://github.com/hamitmizrak/offline-techcareer-angular-app
 
 - ng serve --port 9999 --open
-
--- npm run tsc_nodemon
+- npm run tsc_nodemon
 
 [Angular GitHub](https://github.com/hamitmizrak/offline-techcareer-angular-app) 
 

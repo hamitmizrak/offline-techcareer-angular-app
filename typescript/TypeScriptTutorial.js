@@ -418,7 +418,7 @@ var Msi = /** @class */ (function (_super) {
 var dataComputer = new Computer(9, "msi-mainboard XKL78", false);
 var msiComputer = new Msi(9, "msi-mainboard XKL78", false);
 console.log(msiComputer);
-msiComputer.computerAllInformation();
+msiComputer.computerAllInformation("data11");
 /////////////////////////////////////////////////////////////////
 // ABSTRACT 
 // Gövdeli+Gövdesiz Method
@@ -511,3 +511,4 @@ var ComputerInterface = /** @class */ (function () {
     }
     return ComputerInterface;
 }());
+// 2023 - 144

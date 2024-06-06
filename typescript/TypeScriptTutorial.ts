@@ -432,7 +432,6 @@ console.log(computerValue1.mainboard);
 console.log(computerValue1.isNewVersion);
 
 
-
 /////////////////////////////////////////////////////////////////
 // INHERITANCE
 class Msi extends Computer {
@@ -446,7 +445,7 @@ const dataComputer = new Computer(9, "msi-mainboard XKL78", false);
 
 const msiComputer = new Msi(9, "msi-mainboard XKL78", false);
 console.log(msiComputer)
-msiComputer.computerAllInformation();
+msiComputer.computerAllInformation("data11");
 
 /////////////////////////////////////////////////////////////////
 // ABSTRACT 
@@ -500,7 +499,6 @@ abstract class Car {
     }
 }
 
-
 class Audi extends Car {
     constructor(carPrice: number, carVersion: string, carModel: string) {
         super(carPrice, carVersion, carModel);
@@ -510,7 +508,6 @@ class Audi extends Car {
         console.log("Car Version: ");
     }
 }
-
 
 // Abstract super class new veremezsiniz.
 // Gövdeli ve Gövdesiz metotlar
@@ -522,10 +519,8 @@ const audiCar = new Audi(50, "Version 44", "A3");
 console.log(audiCar)
 audiCar.carAllInformation();
 
-
 /////////////////////////////////////////////////////////////////
 // INTERFACE
-
 interface IComputer {
     cpu: number;
     mainboard: string;
