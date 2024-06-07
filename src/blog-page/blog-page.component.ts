@@ -4,6 +4,7 @@ import { BlogCard } from './BlogCard';
 import { FormsModule } from '@angular/forms';
 import { SearchBlogFilterPipe } from '../custom-pipe/search-blog-filter.pipe';
 import { AlertifyMessageServiceService } from '../services/alertify-message-service.service';
+import { BlogPageService } from '../services/blog-page.service';
 
 @Component({
   selector: 'app-blog-page',
@@ -20,14 +21,33 @@ export class BlogPageComponent implements OnInit  {
 
  // constructor (GlobalService)
  constructor(
-  private alertifyMessageServiceService:AlertifyMessageServiceService
+  private alertifyMessageServiceService:AlertifyMessageServiceService,
+  private blogPageService:BlogPageService
 ) { 
 
 }
 
 // ngOnInit
 ngOnInit(): void {
-  this.alertifyMessageServiceService.alertWarning(`${this.blogCard.length} tane blog var`);
+ 
+  // BlogServiceList
+  this.blogPageService.getBlogServiceObservable().subscribe((response)=>{
+    this.blogCard = response;
+    
+    // Alertify JS
+   this.alertifyMessageServiceService.alertWarning(`${this.blogCard.length} tane blog var`);
+  })
+  
+  
+  
+  // blogServiceList().subscribe(
+  //   (data: BlogCard[]) => {
+  //     this.blogCard = data;
+  //   },
+  //   (error: any) => {
+  //     this.alertifyMessageServiceService.alertDanger(error.message);
+  //   }
+  // );
 }
 
   //DetailPage
@@ -42,6 +62,11 @@ ngOnInit(): void {
 
 
   // BlogCard
+  // 1.YOL
+  blogCard: BlogCard[] = new Array<BlogCard>();
+
+
+  // 2.YOL
   /*
   blogCard: BlogCard[] = [
     {

@@ -143,6 +143,13 @@ json-server --watch --port 4444 blog.json
 ng serve --port 9999 --open
 ```
 
+### Blog Service
+```sh	
+/src/services
+ng g s blogPage
+```
+
+
 ### AlertifyJS
 ```sh	
 Terminal => npm i alertifyjs

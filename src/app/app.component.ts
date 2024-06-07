@@ -1,9 +1,12 @@
-import { AlertifyMessageServiceService } from './../services/alertify-message-service.service';
+import { BlogPageService } from './../services/blog-page.service';
 import { FormsModule } from '@angular/forms';
 import { BlogAboutComponent } from './../blog-about/blog-about.component';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
+// Services
+import { AlertifyMessageServiceService } from './../services/alertify-message-service.service';
 
 
 // Componentler
@@ -17,11 +20,14 @@ import { HttpClientModule } from '@angular/common/http';
 // Ana Root Project
 // Dikkat: Bütün componentleri buraya eklemeliyiz
 @Component({
+
   // Html Tag root
   selector: 'app-root',
 
   // Bu component tek başına kullanabiliriz
   standalone: true,
+
+  // Component veya Module ekliyoruz
   imports: [
     RouterOutlet,
     CommonModule,
@@ -32,11 +38,14 @@ import { HttpClientModule } from '@angular/common/http';
     BlogContentComponent,
     BlogNavbarComponent,
     BlogAboutComponent,
-    HttpClientModule
+    HttpClientModule //Api isteği
   ],
     
-  
-  providers: [AlertifyMessageServiceService],
+  // Global Service
+  providers: [
+    AlertifyMessageServiceService,
+    BlogPageService
+  ],
 
   // Html dosyasını normalde template:``
   templateUrl: './app.component.html',
