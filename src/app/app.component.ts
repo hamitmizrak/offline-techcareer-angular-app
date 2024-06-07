@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { BlogAboutComponent } from './../blog-about/blog-about.component';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
@@ -22,13 +23,13 @@ import { BlogNavbarComponent } from '../blog-navbar/blog-navbar.component';
   imports: [
     RouterOutlet,
     CommonModule,
+    FormsModule,
     BlogHeaderComponent,
     BlogMainComponent,
     BlogFooterComponent,
     BlogContentComponent,
     BlogNavbarComponent,
     BlogAboutComponent,
-    
   ],
     
 

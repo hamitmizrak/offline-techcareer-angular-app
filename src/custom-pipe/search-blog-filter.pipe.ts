@@ -1,4 +1,4 @@
-import { BlogCard } from './../blog-main/BlogCard';
+import { BlogCard } from '../blog-main/BlogCard';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({

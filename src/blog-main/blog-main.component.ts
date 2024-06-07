@@ -1,4 +1,5 @@
-import { SearchBlogFilterPipe } from './../blog-page/search-blog-filter.pipe';
+import { SearchBlogFilterPipe } from './../custom-pipe/search-blog-filter.pipe';
+
 import { CommonModule } from '@angular/common';
 
 import { Component } from '@angular/core';

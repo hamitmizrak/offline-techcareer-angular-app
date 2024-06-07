@@ -1,1 +1,36 @@
-<p>blog-page works!</p>
+<form>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <input type="text" class="form-control mb-5" title="blog ara" placeholder="Blog Ara..."
+                    name="categoryName" [(ngModel)]="dataFilterBlogCategory" />
+                <!-- Gösterilecek Blog ismi -->
+                <div *ngIf="dataFilterBlogCategory" class="alert alert-primary" role="alert">
+                    <strong>Gösterilen Blog Data: </strong> {{dataFilterBlogCategory.length}}:karakter {{dataFilterBlogCategory}}
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="container mt-3 mb-4">
+    <div class="row">
+        <!-- | slice:0:6-->
+        <div *ngFor="let temp of blogCard | searchBlogFilter : dataFilterBlogCategory"
+            class="col-sm-12 col-md-3 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{temp.header | uppercase}}</h5>
+                    <img class="card-img-top h-25" [src]="temp.picture" alt="Resim yoktur" srcset="">
+                    <p class="card-text line-clamp5">{{temp.text | titlecase}}</p>
+                    <!-- <span style="float: right; color:cadetblue; display: inline-block;" class="">{{temp.date | date:"fullDate"}}</span> -->
+
+                    <a (click)="detailPage()" [href]="temp.link" class="btn btn-primary">Details</a>
+                    <br /><br />
+                    <span class="text-muted float-start">{{temp.categoryName | lowercase}}</span>
+                    <span class="text-muted float-end">{{temp.date | date:"fullDate"}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
