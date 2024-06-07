@@ -2,8 +2,9 @@ import { SearchBlogFilterPipe } from './../custom-pipe/search-blog-filter.pipe';
 
 import { CommonModule } from '@angular/common';
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BlogCard } from './BlogCard';
+import { AlertifyMessageServiceService } from '../services/alertify-message-service.service';
 
 @Component({
   selector: 'app-blog-main',
@@ -12,14 +13,23 @@ import { BlogCard } from './BlogCard';
   templateUrl: './blog-main.component.html',
   styleUrl: './blog-main.component.css'
 })
-export class BlogMainComponent {
+export class BlogMainComponent implements OnInit  {
 
   // Variables
-  dataFilterBlogCategory='database';
-  //dataFilterBlogCategory='';
+  // dataFilterBlogCategory='database';
+  dataFilterBlogCategory='';
 
-  // constructor
-  constructor() { }
+  // constructor (GlobalService)
+  constructor(
+    private alertifyMessageServiceService:AlertifyMessageServiceService
+  ) { 
+
+  }
+
+  // ngOnInit
+  ngOnInit(): void {
+    this.alertifyMessageServiceService.alertSuccess("Blog category");
+  }
 
   //DetailPage
   detailPage() {

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { BlogCard } from './BlogCard';
 import { FormsModule } from '@angular/forms';
 import { SearchBlogFilterPipe } from '../custom-pipe/search-blog-filter.pipe';
+import { AlertifyMessageServiceService } from '../services/alertify-message-service.service';
 
 @Component({
   selector: 'app-blog-page',
@@ -17,8 +18,17 @@ export class BlogPageComponent {
   //dataFilterBlogCategory='database';
   dataFilterBlogCategory="";
 
-  // constructor
-  constructor() { }
+ // constructor (GlobalService)
+ constructor(
+  private alertifyMessageServiceService:AlertifyMessageServiceService
+) { 
+
+}
+
+// ngOnInit
+ngOnInit(): void {
+  this.alertifyMessageServiceService.alertWarning(`${this.blogCard.length} tane blog var`);
+}
 
   //DetailPage
   detailPage() {

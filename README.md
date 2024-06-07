@@ -63,6 +63,7 @@ npm i @angular/cli
 npm i  bootstrap
 npm i  fontawesome
 npm i -g nodemon
+npm i alertifyjs
 
 ## Angular Kurulumu
 ```sh
@@ -91,6 +92,7 @@ npm i font-awesome
 npm i bootstrap
 npm i jquery
 npm i -g nodemon
+npm i alertifyjs
 
 ## 3.Parti Uygulamalar Ekle
 ### Font-awesome
@@ -128,6 +130,29 @@ Terminal => npm i jquery
 angular.json => 
  "scripts": [
               "node_modules/jquery/dist/css/jquery.min.js"
+            ],
+
+<div class="alert alert-primary" role="alert">Bootstrap Çalıştı</div>
+```
+
+### AlertifyJS
+```sh	
+Terminal => npm i alertifyjs
+/services/ => ng g service AlertifyMessage
+
+
+angular.json => 
+    "styles": [
+              "src/styles.css",
+              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/alertifyjs/build/css/alertify.min.css",
+              "node_modules/alertifyjs/build/css/themes/bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/alertifyjs/build/alertify.min.js"
             ],
 
 <div class="alert alert-primary" role="alert">Bootstrap Çalıştı</div>

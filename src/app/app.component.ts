@@ -1,3 +1,4 @@
+import { AlertifyMessageServiceService } from './../services/alertify-message-service.service';
 import { FormsModule } from '@angular/forms';
 import { BlogAboutComponent } from './../blog-about/blog-about.component';
 import { CommonModule } from '@angular/common';
@@ -11,6 +12,7 @@ import { BlogFooterComponent } from '../blog-footer/blog-footer.component';
 import { BlogHeaderComponent } from '../blog-header/blog-header.component';
 import { BlogMainComponent } from '../blog-main/blog-main.component';
 import { BlogNavbarComponent } from '../blog-navbar/blog-navbar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // Ana Root Project
 // Dikkat: Bütün componentleri buraya eklemeliyiz
@@ -30,8 +32,11 @@ import { BlogNavbarComponent } from '../blog-navbar/blog-navbar.component';
     BlogContentComponent,
     BlogNavbarComponent,
     BlogAboutComponent,
+    HttpClientModule
   ],
     
+  
+  providers: [AlertifyMessageServiceService],
 
   // Html dosyasını normalde template:``
   templateUrl: './app.component.html',

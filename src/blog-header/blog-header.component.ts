@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   templateUrl: './blog-header.component.html',
   styleUrl: './blog-header.component.css'
 })
+
 export class BlogHeaderComponent {
   // one-way-bind
   logo:string="Tech Logo"
