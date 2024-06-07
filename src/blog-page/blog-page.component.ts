@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BlogCard } from './BlogCard';
 import { FormsModule } from '@angular/forms';
 import { SearchBlogFilterPipe } from '../custom-pipe/search-blog-filter.pipe';
@@ -12,7 +12,7 @@ import { AlertifyMessageServiceService } from '../services/alertify-message-serv
   templateUrl: './blog-page.component.html',
   styleUrl: './blog-page.component.css'
 })
-export class BlogPageComponent {
+export class BlogPageComponent implements OnInit  {
 
   // Variables
   //dataFilterBlogCategory='database';
@@ -42,6 +42,7 @@ ngOnInit(): void {
 
 
   // BlogCard
+  /*
   blogCard: BlogCard[] = [
     {
       id: 1,
@@ -143,6 +144,7 @@ ngOnInit(): void {
       categoryName: "frontend",
     },
   ];
+  */
 
 }
 

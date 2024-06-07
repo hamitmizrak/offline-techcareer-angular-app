@@ -135,6 +135,14 @@ angular.json =>
 <div class="alert alert-primary" role="alert">Bootstrap Çalıştı</div>
 ```
 
+### Json Server
+```sh	
+Terminal => 
+npm i -g json-server
+json-server --watch --port 4444 blog.json 
+ng serve --port 9999 --open
+```
+
 ### AlertifyJS
 ```sh	
 Terminal => npm i alertifyjs
@@ -154,8 +162,6 @@ angular.json =>
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/alertifyjs/build/alertify.min.js"
             ],
-
-<div class="alert alert-primary" role="alert">Bootstrap Çalıştı</div>
 ```
 
 ### typescript
