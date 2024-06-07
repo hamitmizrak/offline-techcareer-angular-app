@@ -1,14 +1,14 @@
 // interface
 export interface IBlogCard{
     id: number;
-    header: String;
+    header: string;
     title: string;
     text: string;
     description: string;
     picture: string;
     date: string;
-    link: String;
-    categoryName: String;
+    link: string;
+    categoryName: string;
 }
 
 // implements
@@ -16,25 +16,25 @@ export class BlogCard implements IBlogCard {
     
     // Field
     id: number;
-    header: String;
+    header: string;
     title: string;
     text: string;
     description: string;
     picture: string;
     date: string;
-    link: String;
-    categoryName: String;
+    link: string;
+    categoryName: string;
 
     constructor(
         id: number,
-        header: String,
+        header: string,
         title: string,
         text: string,
         description: string,
         picture: string,
         date: string,
-        link: String,
-        categoryName: String) {
+        link: string,
+        categoryName: string) {
         this.id = id;
         this.header = header;
         this.title = title;

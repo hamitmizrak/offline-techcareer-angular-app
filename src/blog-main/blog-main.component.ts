@@ -1,3 +1,4 @@
+import { SearchBlogFilterPipe } from './../blog-page/search-blog-filter.pipe';
 import { CommonModule } from '@angular/common';
 
 import { Component } from '@angular/core';
@@ -6,13 +7,15 @@ import { BlogCard } from './BlogCard';
 @Component({
   selector: 'app-blog-main',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,SearchBlogFilterPipe],
   templateUrl: './blog-main.component.html',
   styleUrl: './blog-main.component.css'
 })
 export class BlogMainComponent {
 
   // Variables
+  dataFilterBlogCategory='database';
+  //dataFilterBlogCategory='';
 
   // constructor
   constructor() { }

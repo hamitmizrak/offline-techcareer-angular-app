@@ -169,6 +169,9 @@ ng g c blogMain
 ng g c blogContent
 ng g c blogFooter
 ng g c blogAbout
+ng g c blogPage
+ng generate pipe searchBlogFilter
+ng g p searchBlogFilter
 
 
 - ng serve --port 9999 --open
