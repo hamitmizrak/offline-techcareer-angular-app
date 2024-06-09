@@ -1,5 +1,6 @@
+import { FormPageComponent } from './../form-page/form-page.component';
 import { BlogPageService } from './../services/blog-page.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlogAboutComponent } from './../blog-about/blog-about.component';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
@@ -38,7 +39,9 @@ import { HttpClientModule } from '@angular/common/http';
     BlogContentComponent,
     BlogNavbarComponent,
     BlogAboutComponent,
-    HttpClientModule //Api isteği
+    HttpClientModule, //Api isteği
+    FormPageComponent,
+    ReactiveFormsModule
   ],
     
   // Global Service

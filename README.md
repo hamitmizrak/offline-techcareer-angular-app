@@ -210,6 +210,7 @@ ng g c blogAbout
 ng g c blogPage
 ng generate pipe searchBlogFilter
 ng g p searchBlogFilter
+ng g c formPage
 
 
 - ng serve --port 9999 --open

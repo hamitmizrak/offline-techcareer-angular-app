@@ -1,3 +1,4 @@
+import { FormPageComponent } from './../form-page/form-page.component';
 import { BlogPageComponent } from './../blog-page/blog-page.component';
 import { BlogAboutComponent } from './../blog-about/blog-about.component';
 import { BlogMainComponent } from '../blog-main/blog-main.component';
@@ -10,4 +11,5 @@ export const routes: Routes = [
 
     {path:'about',component:BlogAboutComponent},
     {path:'blog',component:BlogPageComponent},
+    {path:'register',component:FormPageComponent},
 ];

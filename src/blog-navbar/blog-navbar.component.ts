@@ -50,6 +50,11 @@ navBar:{
       linkFontAwesome:'fas fa-blog',
       linkLink:'/blog',
       linkTitle:'Blog'
+    },{
+      linkName:'Register',
+      linkFontAwesome:'fas fa-blog',
+      linkLink:'/register',
+      linkTitle:'Register'
     }
   ]
 }

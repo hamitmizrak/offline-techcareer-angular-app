@@ -1,0 +1,50 @@
+<div class="container bg-dark text-white p-2 w-75">
+    <h2 class="text-uppercase text-center">REgistER</h2>
+    
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        
+        <!-- NAME -->
+        <div class="mb-3">
+            <label for="name" class="text-muted">Name:</label>
+            <input formControlName="name" type="text" class="form-control" name="name" id="name" placeholder="Adınızı giriniz" title="Adınız"
+                 autofocus="true" />
+        </div>
+
+        <!-- SURNAME -->
+        <div class="mb-3">
+            <label for="surname" class="text-muted">Surname:</label>
+            <input formControlName="surname" type="text" class="form-control" name="surname" id="surname" placeholder="Soyadınız"
+                title="Soyadınız"  />
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="mb-3">
+            <label for="password" class="text-muted">Password:</label>
+            <input formControlName="password" type="text" class="form-control" name="password" id="upassword" placeholder="Şifrenizi giriniz"
+                title="Şifreniz"  />
+        </div>
+
+        <!-- EMAIL -->
+        <div class="mb-3">
+            <label for="email" class="text-muted">Email:</label>
+            <input formControlName="email" type="text" class="form-control" name="email" id="email" placeholder="Emailinizi giriniz"
+                title="Emailiniz"  />
+        </div>
+
+        <div class="mb-3">
+            <input type="reset" class="btn btn-danger me-4" value="Temizle">
+        <button type="submit" [disabled]="!registerForm.valid" class="btn btn-primary">Gönder</button>
+        </div>
+    </form>
+
+    <div *ngIf="submitted" class="mt-2" >
+      <h3>Form Register</h3>
+      <p>Name: {{registerForm.value.name}} </p>
+      <p>Surname: {{registerForm.value.surname}} </p>
+      <p>Email: {{registerForm.value.email}} </p>
+      <p>Password: {{registerForm.value.password}} </p>
+</div>
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br>
